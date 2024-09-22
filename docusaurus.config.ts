@@ -7,15 +7,15 @@ const config: Config = {
   title: 'Documentação Mentes Inovadoras | Sistema Web Praça da Ciência',
   favicon: 'img/favicon.ico',
 
-  url: 'https://PracaDaCiencia.github.io',
+  url: 'https://PracaDaCiencia-Docs.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/PracaDaCiencia/',
+  baseUrl: '/PracaDaCiencia-Docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'MentesInovadoras', // Usually your GitHub org/user name.
-  projectName: 'PracaDaCiencia', // Usually your repo name.
+  projectName: 'PracaDaCiencia-Docs', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
