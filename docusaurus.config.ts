@@ -16,6 +16,7 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'MentesInovadoras', // Usually your GitHub org/user name.
   projectName: 'PracaDaCiencia-Docs', // Usually your repo name.
+  trailingSlash: false,
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
