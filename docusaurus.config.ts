@@ -10,12 +10,12 @@ const config: Config = {
   url: 'https://PracaDaCiencia-Docs.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/PracaDaCiencia-Docs/',
+  baseUrl: '/PracaDaCiencia-Docs.github.io/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'MentesInovadoras', // Usually your GitHub org/user name.
-  projectName: 'PracaDaCiencia-Docs', // Usually your repo name.
+  projectName: 'PracaDaCiencia-Docs.github.io', // Usually your repo name.
   trailingSlash: false,
 
   onBrokenLinks: 'warn',
