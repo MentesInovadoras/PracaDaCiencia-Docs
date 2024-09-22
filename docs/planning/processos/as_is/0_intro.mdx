@@ -1,0 +1,42 @@
+---
+position: 1
+title: Realizar Visita
+---
+
+O processo desempenhado na Praça da Ciência é extremamente simples. Não há a necessidade do desenvolvimento de um macro processo modularizado em subprocessos. Nesse sentido, o fluxograma abaixo apresenta a esquematização do processo desempenhado na Praça da Ciência entendido como "Realizar Visita à Praça da Ciência". Nos tópicos abaixo, será descrito de forma mais detalhada cada um dos processos desepmenhados.
+
+import BpmnViewer from '@site/src/components/BpmnViewer';
+
+
+<BpmnViewer diagramUrl="/processes/as_is/0_realizar_visita.bpmn" height="300px" />
+
+## Visitante acessa forms de agendamento
+O proceso incia-se com o Visitante acessado o [site da Praça da Ciência](https://sites.google.com/edu.vitoria.es.gov.br/praca-da-ciencia/agendamento) e selecionando o seu tipo de visitante ([Pessoa Física ou Insittuição de Ensino](/planning/processos/atores/visitante)).
+
+## Agendar visita na Praça da Ciência
+O Visitante preenche o Forms para realizar a visita à Praça da Ciência. No formulário é questionado informações como: forma de contato, dia da visitação, número de pessoas, etc.
+
+## Camada Intermediária Oculta.
+Entre a atividade anterior e a subsequente existe uma cama intermediária que não cabe dentro do fluxograma, mas que é **MUITO** importante. Hoje o agendamento é realizado em um Formulário do Google. Semanalmente, as informações coletadas pelo formulário são extraídas em uma Planilha do Google que é, então, tratada manualmente por algum técnico da Praça da Ciência.
+
+Nesse tratamento, uma série de atividades são desempenhadas, dentre as quais: filtragem de dados antigos; validação dos dados; e manipulação dos dados na tabela com um sistema de cores para uma melhor visualização deles. 
+
+## Verificar se há vaga no horário e dia selecionados
+O Técnico da Praça da Ciência verifica se há vaga no horário e dia selecionados. Entende-se qua há uma vaga quando: a Praça da Ciência ainda está dentro do limite de visitantes (XXX por horário); e quando a visita for guiada, ainda existirem Guias disponíveis.
+
+Quando não há vaga no dia e horário selecionados, os técnicos da Praça da Ciência devem levantar outros dias disponíveis para o visitante. Caso não haja vaga e ocorrer disputa entre instituições, a preferência é **sempre da instituição pública**.
+
+## Enviar mensagem ao Visitante sugerindo um novo dia e horário
+O Técnico da Praça da Ciência envia uma mensagem, que pode ser via ligação, Whatsapp e email, ao visitante sugerindo um novo dia para a visitação.
+
+## Enviar mensagem confirmando ou negando o novo horário
+O Visitante decide se aceita ou não o novo horário sugerido. Caso não aceite, encerra-se o processo e ele pode retornar ao _site_ da Praça da Ciência para dar início a um novo agendamento.
+
+## Marcar a visitação
+O Técnico da Praça da Ciência acessa a planilha de visitação marca o agendamento. É informado qual o tipo de visitante, quantas pessoas vão participr, dia e horário da visita e é alocado um Guia, caso a visita seja guiada.
+
+## Enviar mensagem de confirmação de visita ao Visitante próximo à data da visita
+O Técnico da Praça da Ciência envia uma mensagem ao Visitante próximo ao dia da visita para verificar se o Visitante ainda vai à intituição ou se algum imprevisto ocorreu.
+
+## Desagendar a visitação
+O Técnico da Praça da Ciência vai na planilha de agendamentos e libera o espaço para um novo agendamento.
