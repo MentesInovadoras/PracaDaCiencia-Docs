@@ -17,6 +17,7 @@ const config: Config = {
   organizationName: 'MentesInovadoras', // Usually your GitHub org/user name.
   projectName: 'PracaDaCiencia-Docs.github.io', // Usually your repo name.
   trailingSlash: false,
+  deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
